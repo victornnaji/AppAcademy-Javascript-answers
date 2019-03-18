@@ -1,28 +1,10 @@
-def abbreviate_sentence(sent)
-    words = sent.split(" ")
-    new_words = []
-  
-    words.each do |word|
-      if word.length > 4
-        new_word = abbreviate_word(word)
-        new_words << new_word
-      else
-        new_words << word
-      end
-    end
-  
-    return new_words.join(" ")
+def format_name(str)
+  parts = str.split(" ")
+  new_parts = []
+
+  parts.each do |part|
+    new_parts << part[0].upcase + part[1..-1].downcase
   end
-  
-  def abbreviate_word(word)
-    vowels = "aeiou"
-    new_word = ""
-  
-    word.each_char do |char|
-      if !vowels.include?(char)
-        new_word += char
-      end
-    end
-  
-    return new_word
-  end
+
+  return new_parts.join(" ")
+end
