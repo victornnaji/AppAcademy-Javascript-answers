@@ -1,4 +1,4 @@
-function abbreviate_sentence(name){
+function format_name(name){
 let arr = name.split(' ').map(x => capWord(x)).join(' ');
 
 return arr;
