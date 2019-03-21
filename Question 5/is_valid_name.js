@@ -13,12 +13,12 @@ function is_valid_name(str){
   //create a function to check for each words and test for uppercase
   function firstword(word){
     for(let i =1; i<word.length; i++){
-      if(word[0] === word[0].toUpperCase() === true && 
-      word[i] === word[i].toUpperCase() === false){
-        return true;
+      if(!(word[0] === word[0].toUpperCase() === true &&
+      word[i] === word[i].toUpperCase() === false)){
+        return false;
       }
     }
-    return false;
+    return true;
   }
 
 console.log(is_valid_name("Kush Patel")) // => true
