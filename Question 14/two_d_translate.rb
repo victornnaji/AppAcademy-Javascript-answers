@@ -26,4 +26,4 @@ def two_d_translate(arr)
   ]
   
   print two_d_translate(arr_2) # => [ 'red', 'blue', 'blue', 'blue', 'blue' ]
-  puts
+  putsa
